@@ -50,21 +50,22 @@ int main()
     if(x2>=x1 && y2>=y1)  
     {  
         t=(f(x1+y1)/(f(x1)*f(y1)))*(f(m+n-x1-y1)/(f(m-x1)*f(n-y1))-f(x2+y2-x1-y1)*f(m+n-x2-y2)/(f(x2-x1)*f(y2-y1)*f(m-x2)*f(n-y2)))+f(m+n-x2-y2)/(f(m-x2)*f(n-y2))*(f(x2+y2)/(f(x2)*f(y2))-f(x1+y1)/(f(x1)*f(y1))*(f(x2+y2-x1-y1)/(f(x2-x1)*f(y2-y1))));  
-        printf("%d",t);    
+        printf("%d\n",t);    
     }  
     else if(((x2>x1)&&(y2<y1)) || ((x2<x1)&&(y2>y1)))  
     {  
         u=f(x1+y1)/(f(x1)*f(y1))*(f(m+n-x1-y1)/(f(m-x1)*f(n-y1)))+f(x2+y2)/(f(x2)*f(y2))*(f(m+n-x2-y2)/(f(m-x2)*f(n-y2)));  
-        printf("%d",u);  
+        printf("%d\n",u);  
     }  
     else if(x2<x1 && y2<y1)    
     {  
         v=f(x2+y2)/(f(x2)*f(y2))*(f(m+n-x2-y2)/(f(m-x2)*f(n-y2))-(f(x1+y1-x2-y2)/(f(x1-x2)*f(y1-y2)))*f(m+n-x1-y1)/(f(m-x1)*f(n-y1)))+f(m+n-x1-y1)/(f(m-x1)*f(n-y1))*(f(x1+y1)/(f(x1)*f(y1))-(f(x2+y2)/(f(x2)*f(y2))*f(x1+y1-x2-y2)/(f(x1-x2)*f(y1-y2))));    
-        printf("%d",v);      
+        printf("%d\n",v);      
     }    
     return 0;  
 }  
 </p>
+
 ---
 
 ## Editorial:-
