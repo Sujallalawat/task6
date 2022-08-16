@@ -15,13 +15,16 @@ Display the number of ways in which Sujal can reach his destination.
 
 Note:You have to consider the shortest path.  
 
+---
+
 ## Sample Input:-
 3 2  
 1 1 2 2  
 ## Sample Output:-
 4</p>
 
-# solution:-
+---
+# Solution:-
 
 <p>#include<stdio.h>
 int f(int n)
@@ -39,26 +42,34 @@ int f(int n)
 
 }
 int main()  
-{
+{  
     int m,n,t,u,v;    
     scanf("%d %d",&m,&n);  
     int x1,y1,x2,y2;  
     scanf("%d %d %d %d",&x1,&y1,&x2,&y2);  
-    if(x2>=x1 && y2>=y1)
-    {
+    if(x2>=x1 && y2>=y1)  
+    {  
         t=(f(x1+y1)/(f(x1)*f(y1)))*(f(m+n-x1-y1)/(f(m-x1)*f(n-y1))-f(x2+y2-x1-y1)*f(m+n-x2-y2)/(f(x2-x1)*f(y2-y1)*f(m-x2)*f(n-y2)))+f(m+n-x2-y2)/(f(m-x2)*f(n-y2))*(f(x2+y2)/(f(x2)*f(y2))-f(x1+y1)/(f(x1)*f(y1))*(f(x2+y2-x1-y1)/(f(x2-x1)*f(y2-y1))));  
-        printf("%d",t);  
-    }
-    else if(((x2>x1)&&(y2<y1)) || ((x2<x1)&&(y2>y1)))
-    {
-        u=f(x1+y1)/(f(x1)*f(y1))*(f(m+n-x1-y1)/(f(m-x1)*f(n-y1)))+f(x2+y2)/(f(x2)*f(y2))*(f(m+n-x2-y2)/(f(m-x2)*f(n-y2)));
-        printf("%d",u);  
-    }
-    else if(x2<x1 && y2<y1)  
-    {
-        v=f(x2+y2)/(f(x2)*f(y2))*(f(m+n-x2-y2)/(f(m-x2)*f(n-y2))-(f(x1+y1-x2-y2)/(f(x1-x2)*f(y1-y2)))*f(m+n-x1-y1)/(f(m-x1)*f(n-y1)))+f(m+n-x1-y1)/(f(m-x1)*f(n-y1))*(f(x1+y1)/(f(x1)*f(y1))-(f(x2+y2)/(f(x2)*f(y2))*f(x1+y1-x2-y2)/(f(x1-x2)*f(y1-y2))));  
-        printf("%d",v);    
+        printf("%d",t);    
     }  
-    return 0;
-}
+    else if(((x2>x1)&&(y2<y1)) || ((x2<x1)&&(y2>y1)))  
+    {  
+        u=f(x1+y1)/(f(x1)*f(y1))*(f(m+n-x1-y1)/(f(m-x1)*f(n-y1)))+f(x2+y2)/(f(x2)*f(y2))*(f(m+n-x2-y2)/(f(m-x2)*f(n-y2)));  
+        printf("%d",u);  
+    }  
+    else if(x2<x1 && y2<y1)    
+    {  
+        v=f(x2+y2)/(f(x2)*f(y2))*(f(m+n-x2-y2)/(f(m-x2)*f(n-y2))-(f(x1+y1-x2-y2)/(f(x1-x2)*f(y1-y2)))*f(m+n-x1-y1)/(f(m-x1)*f(n-y1)))+f(m+n-x1-y1)/(f(m-x1)*f(n-y1))*(f(x1+y1)/(f(x1)*f(y1))-(f(x2+y2)/(f(x2)*f(y2))*f(x1+y1-x2-y2)/(f(x1-x2)*f(y1-y2))));    
+        printf("%d",v);      
+    }    
+    return 0;  
+}  
+</p>
+---
+
+## Editorial:-
+
+<p>
+This is the problem we have done during JEE times . It requires a complex and time dedicated techniques to solve the problem. THe further explaination I can give during my interview :) with mathematical explaination.
+I have not writen a loop for the test cases as I have not enough time as this task I am doing at last after completing previous other 2 tasks.
 </p>
